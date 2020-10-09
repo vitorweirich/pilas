@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>PILA$</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">PILA$</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="modal" data-target="#modalcategoria">Categorias</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="modal" data-target="#modallancamento">Novo lançamento</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+          </form>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>PILA$</h1>
+            <P>Nesta apilicação web vovê poderá gerenciar todos os seus pilas!</P>
+            <hr>
+            <h6>Registre aqui todos os pilas que você ganha e todos os pilas que você gasta, separe em quantas categorias quiser.</h6>
+        </div>
+        <div class="table-responsive-sm">
+          <table class="table table-hover">
+              <thead>
+                  <tr>
+                      <th></th>
+                      <th scope="col">Categoria</th>
+                      <th scope="col">Data Hora</th>
+                      <th scope="col">Descrição</th>
+                      <th scope="col">Pilas</th>
+                      <th></th>
+                      <th></th>
+                  </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">+</th>
+                  <td>Salário</td>
+                  <td>06/09/2020 16:35:00</td>
+                  <td>Folha de Agosto</td>
+                  <td>5.416.32</td>
+                  <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalalterar">Alterar</button></td>
+                  <td><button type="button" class="btn btn-danger">Excluir</button></td>
+                </tr>
+                <tr>
+                  <th scope="row">-</th>
+                  <td>Educação</td>
+                  <td>10/09/2020 08:45:00</td>
+                  <td>Mensalidade de setembro</td>
+                  <td>580.00</td>
+                  <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalalterar">Alterar</button></td>
+                  <td><button type="button" class="btn btn-danger">Excluir</button></td> 
+                </tr>
+                <tr>
+                  <th scope="row">-</th>
+                  <td>Combustível</td>
+                  <td>12/09/2020 18:00:00</td>
+                  <td>Gasolina posto Alfa</td>
+                  <td>150.00</td>
+                  <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalalterar">Alterar</button></td>
+                  <td><button type="button" class="btn btn-danger">Excluir</button></td> 
+                </tr>
+              </tbody>
+          </table>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-bottom">
+        <span>Todos os direitos reservados - Fundamentos ao desenvolvimento web - 2020</span>
+    </nav>
+
+    <!-- Modal para alterar -->
+    <div class="modal fade" id="modalalterar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Alterar lançamento</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Descrição</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite a descrição do lançamento">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Pilas</label>
+                  <input class="form-control" id="exampleInputPassword1" placeholder="Quantos pilas">
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-primary">Salvar</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Modal das categorias -->
+    <div class="modal fade" id="modalcategoria" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Alterar lançamento</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="row">
+                  <div class="col col-md-6">
+                    <input type="text" class="form-control" placeholder="Digite o nome da categoria">
+                  </div>
+                  <button type="button" class="btn btn-primary">Salvar</button>
+                </div>
+              </form>
+              <br>
+              <ul class="list-group">
+                <li class="list-group-item">Alimentação</li>
+                <li class="list-group-item">Combustível</li>
+                <li class="list-group-item">Educação</li>
+                <li class="list-group-item">Entretenimento</li>
+                <li class="list-group-item">Salário</li>
+              </ul>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Modal lançamentos -->
+    <div class="modal fade" id="modallancamento" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Novo lançamento</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group">
+                  <label for="exampleFormControlSelect1">Categoria</label>
+                  <select class="form-control" id="exampleFormControlSelect1">
+                    <option>Alimentação</option>
+                    <option>Combustível</option>
+                    <option>Educação</option>
+                    <option>Entretenimento</option>
+                    <option>Salário</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="exampleFormControlSelect1">Tipo</label>
+                  <select class="form-control" id="exampleFormControlSelect1">
+                    <option>Ganhei pilas</option>
+                    <option>Gastei pilas</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Descrição</label>
+                  <input class="form-control" id="exampleInputPassword1" placeholder="Digite a descrição do lançamento">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Pilas</label>
+                  <input class="form-control" id="exampleInputPassword1" placeholder="Quantos pilas">
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-primary">Salvar</button>
+            </div>
+        </div>
+        </div>
+    </div>
+    
+
+    <!-- JavaScript (Opcional) -->
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>
